@@ -1,10 +1,15 @@
 import React from 'react';
+import Display from './Display';
 const List = (props) => {
     return (
-       <div className={props.value}>
-            
+       <div >
+         <ol>
+            {props.arr.map((one)=><Display prod={one}/>)}
+         </ol>
        </div>
     );
 }
+
+
 
 export default List;

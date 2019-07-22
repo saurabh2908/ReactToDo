@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <div>
         <NavLink activeClassName="active" to="/">ADD</NavLink>&nbsp;&nbsp;
