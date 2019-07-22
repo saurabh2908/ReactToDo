@@ -17,11 +17,11 @@ const Add = (props) => {
     <input onChange={props.input} type="text" className="form-control" id="desc" placeholder="Enter description"/>
   </div>
    <div className="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" className="form-control">
+      <label for="inputState">Status</label>
+      <select onChange={props.input} id="status" className="form-control">
         <option hidden>Choose...</option>
-        <option>Paid</option>
-        <option>Unpaid</option>
+        <option value="paid">Paid</option>
+        <option value="unpaid">Unpaid</option>
       </select>
     </div> 
 
