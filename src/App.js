@@ -15,7 +15,7 @@ class App extends Component {
 this.inputs[event.target.id]=event.target.value;
 console.log(this.inputs);
   }
-add(event){
+add(){
   console.log("The input inside add is ",this.inputs);
   this.arr.push(this.inputs);
   console.log("The array is ",this.arr);
