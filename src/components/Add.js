@@ -26,7 +26,7 @@ const Add = (props) => {
     </div> 
 
    
-<button onClick={props.add} type="submit" className="btn btn-primary">ADD</button>
+<button onClick={props.add} type="submit" className="btn btn-success">ADD</button>
 </form>
     );
 }

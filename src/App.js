@@ -22,7 +22,6 @@ add(event){
   this.inputs={};
   console.log("The array is ",this.arr);
   this.setState({...this.state,arr:this.arr});
-  console.log("The Array in smart is",this.state.arr);
 }
   render() {
     return (
