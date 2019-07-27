@@ -5,7 +5,7 @@ const List = (props) => {
     return (
        <div >
          <ol>
-            {props.arr.map((one)=><Display prod={one}/>)}
+            {props.arr.map((one)=><Display prod={one} />)}
          </ol>
        </div>
     );

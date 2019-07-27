@@ -8,13 +8,15 @@ class App extends Component {
     super(props);
     this.inputs={};
     this.arr=[];
-    this.state = {inputs:this.inputs,arr:this.arr  };
+    this.flag=true;
+    this.state = {inputs:this.inputs,arr:this.arr,flag:this.flag  };
   }
   takeInput(event){
     console.log(event.target.value);
 this.inputs[event.target.id]=event.target.value;
 console.log(this.inputs);
   }
+
 add(event){
   event.preventDefault();
   console.log("The input inside add is ",this.inputs);
@@ -24,13 +26,15 @@ add(event){
   this.setState({...this.state,arr:this.arr});
 }
   render() {
+
     return (
       <div>
     <Navbar/>
     <Switch>
       
       <Route exact path="/" render={(props) => <Add input={this.takeInput.bind(this)} add={this.add.bind(this)} {...props} />}/>
-      <Route path="/list" render={(props) => <List arr={this.state.arr} {...props}/>}/>
+      <Route path="/list" render={(props) => <List arr={this.state.arr}  {...props}/>}/>
+    
     </Switch>
     </div>
     );
