@@ -25,6 +25,12 @@ add(event){
   console.log("The array is ",this.arr);
   this.setState({...this.state,arr:this.arr});
 }
+
+update(obj,index){
+this.arr[index]=obj;
+this.setState({...this.state,arr:this.arr})
+
+}
   render() {
 
     return (
@@ -33,7 +39,7 @@ add(event){
     <Switch>
       
       <Route exact path="/" render={(props) => <Add input={this.takeInput.bind(this)} add={this.add.bind(this)} {...props} />}/>
-      <Route path="/list" render={(props) => <List arr={this.state.arr}  {...props}/>}/>
+      <Route path="/list" render={(props) => <List arr={this.state.arr} update={this.update.bind(this)} {...props}/>}/>
     
     </Switch>
     </div>

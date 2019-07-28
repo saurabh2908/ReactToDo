@@ -5,7 +5,7 @@ const List = (props) => {
     return (
        <div >
          <ol>
-            {props.arr.map((one)=><Display prod={one} />)}
+            {props.arr.map((one)=><Display prod={one} index={props.arr.indexOf(one)} update={props.update}/>)}
          </ol>
        </div>
     );

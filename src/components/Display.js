@@ -6,7 +6,7 @@ const Display = (props) => {
     const [flag, setflag] = useState(true);
     var tim;
     if(flag==false){
-        tim=<Edit/>
+        tim=<Edit index={props.index} update={props.update}/>
     }
     return (
        <li className={props.prod.status} >
