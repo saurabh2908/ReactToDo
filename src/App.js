@@ -12,6 +12,8 @@ class App extends Component {
     this.state = {inputs:this.inputs,arr:this.arr,flag:this.flag  };
   }
   takeInput(event){
+    console.log("event is",event);
+    console.log("target for this event",event.target)
     console.log(event.target.value);
 this.inputs[event.target.id]=event.target.value;
 console.log(this.inputs);
@@ -29,6 +31,8 @@ add(event){
 update(obj,index){
 this.arr[index]=obj;
 this.setState({...this.state,arr:this.arr})
+  console.log("object is",obj);
+  console.log("index is", index);
 
 }
   render() {
